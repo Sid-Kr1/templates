@@ -6,13 +6,13 @@ __maintainer__ = "Sid Krishnan"
 __email__ = ""
 __status__ = "Development"
 
-# import argparse
+import argparse
 # import concurrent.futures  # for concurrent.futures.ProcessPoolExecutor()
 # import errno
-# import sys
+import sys
 # from pathlib import Path  # Python3 libs for os.path
 # from shutil import rmtree
-# from subprocess import PIPE, Popen
+from subprocess import PIPE, Popen
 
 # import dask.dataframe as dd
 # import numpy as np
@@ -41,7 +41,7 @@ def do_work(args):
     # run something external using a thread pool
     pool = Pool(6)
     cmds = ['ls -l', 'ls -alh', 'ps -ef']
-    print pool.map(run_command, cmds)
+    print(pool.map(run_command, cmds))
     """
 
     """
@@ -49,7 +49,7 @@ def do_work(args):
     try:
         with open(args.filename, "r") as fh:
             for line in fh:
-                print line
+                print(line)
     except:
         print "Error opening file:\"", args.filename, "\", sys.exc_info()[0]
         raise
@@ -116,7 +116,7 @@ if __name__ == "__main__":
         or sys.argv[1] == "-version"
         or sys.argv[1] == "--version"
     ):
-        print "%s: version: %s" % (__script_name__, __version__)
+        print(f"{__script_name__}: version: {__version__}")
         sys.exit(0)
     elif (
         sys.argv[1] == "-h"
@@ -146,5 +146,5 @@ if __name__ == "__main__":
         else:
             do_work(args)
     except:
-        print "Unexpected error:", sys.exc_info()[0]
+        print(f"Unexpected error: {sys.exc_info()[0]}")
         raise
