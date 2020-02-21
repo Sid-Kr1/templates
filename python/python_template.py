@@ -51,43 +51,31 @@ def do_work(args):
             for line in fh:
                 print(line)
     except:
-        print "Error opening file:\"", args.filename, "\", sys.exc_info()[0]
+        print(f"Error opening file:\" {args.filename} \" {sys.exc_info()[0]}")
         raise
     """
 
     """
     fig = plt.figure()
-
+    # Needs to be update for ploty
+    
     #-----
     # make a 3d plot
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(points[:,0],
-               points[:,1],
-               points[:,2],
-               #edgecolors='none',
-               #c=colors,
-               #s=2,
-               #marker='.'
-               )
+    # Needs to be update for ploty
 
     #-----
     # make a 2d plot
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.plot(points[:,0],
-            points[:,1],
-            '*g')
+    # Needs to be update for ploty
 
     #-----
     # show figure
-    plt.show()
+    # Needs to be update for ploty
     # or save figure
-    plt.savefig(filename,dpi=300,format='png')
+    # Needs to be update for ploty
 
     #-----
     # clean up!
-    plt.close(fig)
-    del fig
+    # Needs to be update for ploty
     """
 
     return 0
