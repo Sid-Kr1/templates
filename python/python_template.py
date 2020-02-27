@@ -42,6 +42,9 @@ def do_work(args):
     pool = Pool(6)
     cmds = ['ls -l', 'ls -alh', 'ps -ef']
     print(pool.map(run_command, cmds))
+
+
+    Need to be updated to use concurrent.futures.processpoolexectutor
     """
 
     """
@@ -57,25 +60,25 @@ def do_work(args):
 
     """
     fig = plt.figure()
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
     
     #-----
     # make a 3d plot
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
 
     #-----
     # make a 2d plot
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
 
     #-----
     # show figure
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
     # or save figure
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
 
     #-----
     # clean up!
-    # Needs to be update for ploty
+    # Needs to be updated for ploty
     """
 
     return 0
@@ -94,6 +97,11 @@ if __name__ == "__main__":
 
     # -------------------------------------------------
     # get and check options
+
+    #### not sure if the below section is required?
+
+    #### I think it can be handled with just arg parser
+
     args = None
     if len(sys.argv) == 1:
         parser.print_help()
