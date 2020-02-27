@@ -81,6 +81,10 @@ def do_work(args):
     # Needs to be updated for ploty
     """
 
+
+    # Might be good to have a section here to call other scripts
+
+    # Also this section could get input from the arg.parser
     return 0
 
 
